@@ -1,0 +1,56 @@
+@media only screen {
+	/* 
+		Hero 
+	*/
+	.home-areasserved{
+		background-color: white;
+	}
+	.home-areasserved-map-learnmore{
+		background-color: $ink;
+		border: 0px;
+		text-transform: capitalize;
+		i{
+			color: $pink;
+			font-size: 2rem;
+		}
+	}
+	.areas-served-hero{
+		height: 400px !important;
+		box-sizing: border-box;
+		padding: 0px;
+	}
+	/* 
+		Below Hero / Content Area / Grid
+	*/
+	.areas-served-areas {
+		padding: 20px;
+		background-color: white;
+	}
+	/* 
+		Below the Grid 
+	*/
+	.areas-served-hero-map{
+		filter: grayscale(100%);
+		@include transition(filter 0.4s ease);
+	}
+	.areas-served-areas-grid-imagecontainer-citystate{
+		background-color: $ink;
+		color: white;
+		padding: 20px;
+	}
+}
+@media only screen and (min-width: $medium){
+}
+@media only screen and (min-width: $large){
+	.areas-served-hero{
+		height: 100vh !important;
+	}
+	// This is the... background here???
+	.home-areasserved-map{
+		&:hover{
+			.areas-served-hero-map{
+				filter: grayscale(0%);
+			}
+		}
+	}
+}

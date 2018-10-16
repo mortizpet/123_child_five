@@ -1,0 +1,45 @@
+@import 'mixins', 'fonts', 'vars';
+
+html{
+	font-family: $body;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: $header;
+}
+img {
+	object-fit: cover;
+}
+
+@media only screen {
+	.global-contact-contact-header{
+		letter-spacing: 2px;
+	}
+}
+
+@import 'popups';
+@import 'section';
+@import 'components/superheader';
+@import 'components/headerquote';
+@import 'components/headerinfo';
+@import 'components/nav-desktop';
+@import 'components/nav-mobile';
+@import 'components/footer-desktop';
+@import 'components/footer-mobile';
+@import 'components/gform';
+@import 'hero';
+@import 'pages/home-hero';
+@import 'pages/home-cover';
+@import 'pages/home-quickquote';
+@import 'pages/company';
+@import 'pages/services';
+@import 'pages/menu';
+@import 'pages/blog';
+@import 'pages/single';
+@import 'pages/testimonials';
+@import 'pages/contact';
+@import 'pages/areas-served';
+@import 'pages/page-content';
+@import 'pages/global-recentposts';
+@import 'pages/global-contact';
+@import 'pages/gallery';
+@import 'pages/coupons';

@@ -1,0 +1,61 @@
+@media only screen {
+	.home-quickquote{
+		display: none;
+	}
+}
+
+@media only screen and (min-width: $medium){
+
+}
+
+@media only screen and (min-width: $large){
+	.home-quickquote{
+		background-color: $ink;
+		display: block;
+	}
+	.home-quickquote-wrapper{
+		padding: 20px 40px;;
+		font-size: 0;
+		// text-align: right;
+		text-align: justify;
+		&:after {
+			display: inline-block;
+			width: 100%;
+			content: '';
+		}
+	}
+	.home-quickquote-wrapper-left,
+	.home-quickquote-wrapper-right{
+		display: inline-block;
+		font-size: 1.6rem;
+	}
+	.home-quickquote-wrapper-left{
+		color: white;
+		text-align: right;
+		margin-right: 40px;
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+	.home-quickquote-wrapper-right-button{
+		display: inline-block;
+		background-color: $pink;
+		color: white;
+		padding: 15px 30px 15px 20px;
+		font-size: 1.4rem;
+		margin: 0 auto;
+		cursor: pointer;
+		position: relative;
+		text-transform: capitalize;
+		letter-spacing: 1px;
+		i{
+			color: $ink;
+			margin-left: 10px;
+			font-size: 2rem;
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+	}
+}

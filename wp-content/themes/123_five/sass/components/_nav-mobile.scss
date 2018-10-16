@@ -1,0 +1,15 @@
+@media only screen {
+	.mobileheader-bar-tint{
+		background-color: $ink;
+	}
+	.mobileheader-menus-social-menu-item-link-icon{
+		color: $pink;
+	}
+}
+
+@media only screen and (min-width: $medium){
+
+}
+
+@media only screen and (min-width: $large){
+}

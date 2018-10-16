@@ -1,0 +1,56 @@
+@media only screen {
+	.herocontent{
+		display: none;
+	}
+	.hero{
+		padding: 120px 0;
+		height: auto !important;
+	}
+	.hero-text{
+		h1 {
+			color: white;
+		}
+	}
+	.hero-text-subheader{
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: $medium){
+
+}
+
+@media only screen and (min-width: $large){
+	.hero{
+		max-width: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh !important;
+		background-size: cover;
+		z-index: 1;
+		padding: 0px;
+	}
+	.hero-text{
+		display: none;
+	}
+	.herocontent{
+		display: block;
+		padding-top: 110px;
+	}
+	.herocontent-text{
+		padding: 140px 0;
+		color: white;
+		text-align: center;
+	}
+	.herocontent-text-header{
+		font-size: 5rem;
+		font-weight: 700;
+	}
+}
+@media only screen and (min-width: $nav_desktop){
+	.herocontent{
+		padding-top: 0px;
+	}
+}

@@ -1,0 +1,46 @@
+@media only screen {
+	.mobileheaderquote{
+		background-color: $pink;
+	}
+	.mobileheaderquote-wrapper{
+		padding: 40px 20px;
+	}
+	.mobileheaderquote-wrapper-text{
+		color: white;
+		text-align: center;
+		font-weight: 700;
+		font-size: 2rem;
+	}
+	.mobileheaderquote-wrapper-button{
+		display: inline-block;
+		position: relative;
+		left: 50%;
+		@include transform(translateX(-50%));
+		background-color: $ink;
+		color: white;
+		padding: 15px 30px 15px 20px;
+		font-size: 1.4rem;
+		margin-top: 20px;
+		cursor: pointer;
+		i{
+			color: $pink;
+			margin-left: 10px;
+			font-size: 2rem;
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+	}
+}
+
+@media only screen and (min-width: $medium){
+
+}
+
+@media only screen and (min-width: $large){
+	.mobileheaderquote,
+	.mobileheaderinfo{
+		display: none;
+	}
+}

@@ -1,0 +1,131 @@
+@media only screen {
+	.services{
+		padding: 20px;
+		z-index: 1;
+		background-color: white;
+	}
+
+	// Grid Items
+	.services-grid-item{
+		margin: 0 auto 40px auto;
+		box-shadow: $box-shadow;
+	}
+	.services-grid-item-imagecontainer{
+		height: 200px;
+		overflow: hidden;
+		position: relative;
+	}
+	.services-grid-item-imagecontainer-image{
+		width: 100%;
+		min-height: 100%;
+
+	}
+	.services-grid-item-header{
+		text-transform: lowercase;
+		font-weight: 700;
+		font-size: 2.4rem;
+		&:after{
+			content: '';
+			display: block;
+			width: 60px;
+			border-bottom: 6px solid $pink;
+			margin: 10px auto;
+		}
+	}
+	// Service Description
+	.services-grid-item-descriptioncontainer{
+		padding: 15px;
+		text-align: center;
+		width: 100%;
+	}
+	.services-grid-item-descriptioncontainer-description{
+		font-size: 1.6rem;
+		padding: 0px;
+	}
+	// Services Price
+	.services-grid-item-pricecontainer-price{
+		padding-top: 20px;
+		font-size: 2rem;
+		text-align: center;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+	.home-viewall{
+		display: inline-block;
+		background-color: $ink;
+		color: white;
+		padding: 15px 30px 15px 20px;
+		font-size: 1.4rem;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		cursor: pointer;
+		position: relative;
+		text-transform: capitalize;
+		letter-spacing: 1px;
+		i{
+			color: $pink;
+			margin-left: 10px;
+			font-size: 2rem;
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+	}
+}
+
+@media only screen and (min-width: $medium){
+	.services-grid {
+
+	}
+	.services-grid-item {
+		display: inline-block;
+		vertical-align: top;
+		margin: 15px;
+		margin-bottom: 20px;
+		padding: 0;
+		width: calc(50% - 30px);
+	}
+}
+
+@media only screen and (min-width: $large){
+	.services {
+		max-width: 1230px;
+
+	}
+	.services-grid{
+	}
+	.services-grid-item{
+		width: calc(calc(100% / 3) - 30px);
+
+	}
+
+	.services-grid-item-descriptioncontainer{
+	}
+	.services-grid-item-wrapper{
+		width: 100%;
+	}
+
+	.services-grid-item-imagecontainer{
+		width: 100%;
+	}
+	.services-grid-item-header{
+		&:after{
+			margin: 10px 0;
+		}
+	}
+
+
+	.services-grid {
+		.services-grid-item.services-grid-item--invert {
+			@include transform(rotate(0));
+			.services-grid-item-wrapper,
+			.services-grid-item-imagecontainer {
+				@include transform(rotate(0));
+			}
+		}
+	}
+
+
+}

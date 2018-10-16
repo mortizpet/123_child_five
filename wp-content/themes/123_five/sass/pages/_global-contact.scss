@@ -1,0 +1,29 @@
+@media only screen {
+	.global-contact-content-button{
+		background-color: $ink;
+		color: white;
+		text-transform: capitalize;
+		font-weight: 400;
+		padding-right: 30px;
+		position: relative;
+		&:after{
+			content: '\f105';
+			display: inline-block;
+			position: absolute;
+			margin-left: 10px;
+			font-size: 2rem;
+			font-family: 'FontAwesome';
+			color: $pink;
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+	}
+}
+
+@media only screen and (min-width: $medium){
+
+}
+
+@media only screen and (min-width: $large){
+	
+}

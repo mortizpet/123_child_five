@@ -1,0 +1,105 @@
+@media only screen {
+	
+	
+	.blog-blog-pagination{
+		text-align: center;
+		*{
+			font-size: 1.6rem;
+		}
+	}
+	.blog-blog-grid-item{
+		box-shadow: $box-shadow;
+		padding: 40px 20px;
+		margin: 0px auto 40px auto;
+		&:first-child{
+			margin-top: 0px;
+		}
+	}
+	.blog-blog-grid-item-textcontainer-header{
+		text-transform: lowercase;
+		font-size: 2.5rem;
+		&:after{
+			content: '';
+			display: block;
+			width: 60px;
+			margin: 10px 0;
+			border-bottom: 6px solid $pink;
+		}
+	}
+	.blog-blog-grid-item-textcontainer-description{
+		text-align: left;
+	}
+	.blog-blog-grid-item-socialcontainer-link.sociallink{
+		@include transition(background-color 0.25s ease);
+		background-color: rgb(127,127,127);
+		border-radius: 100px;
+	}
+}
+
+@media only screen and (min-width: $medium){
+	.blog-blog-grid{
+		font-size: 0;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.blog-blog-grid-item{
+		width: calc(50% - 40px);
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 20px 40px 20px;
+	}
+}
+
+@media only screen and (min-width: $large){
+	.sociallink{
+		&:hover{
+			background-color: $pink;
+		}
+	}
+	.blog-blog-grid{
+		width: calc(70% - 20px);
+	}
+	.blog-blog-grid-item {
+		width: calc(100% - 40px);
+	}
+	.blog-blog-sidebar{
+		margin-top: 0px;
+		box-shadow: $box-shadow;
+	}
+	.blog-blog-sidebar-archive-header,
+	.blog-blog-sidebar-categories-header,
+	.blog-blog-sidebar-recentposts-header{
+		text-transform: lowercase;
+		font-weight: 700;
+		border-bottom: 0px;
+		font-size: 2rem;
+		&:after{
+			content: '';
+			border-bottom: 6px solid $pink;
+			display: block;
+			width: 60px;
+			position: relative;
+			margin: 10px 0 0 0;
+		}
+	}
+	a.blog-blog-sidebar-quickquote{
+		background-color: $ink;
+		text-transform: capitalize;
+		border-radius: 0px;
+		padding-right: 37px;
+		padding-left: 20px;
+		position: relative;
+		&:after{
+			content: '\f105';
+			display: block;
+			font-family: 'FontAwesome';
+			color: $pink;
+			position: absolute;
+			margin-left: 10px;
+			top: 50%;
+			right: 15px;
+			font-size: 2rem;
+			@include transform(translateY(-50%));
+		}
+	}
+}

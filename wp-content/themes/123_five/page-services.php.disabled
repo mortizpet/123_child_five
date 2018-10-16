@@ -1,0 +1,40 @@
+<?php
+	
+if ( !Pagedata::is_active_page('services') ) {
+	header( "Location: " . site_url() . "/404.php" );
+}
+get_header(); ?>
+
+<main class="services main">
+	<?php render_page_hero('services'); ?>
+	<section class="services-services pagecontent">
+		<?php if(have_rows('services-repeater', 'option')) : ?>
+		<div class="services-services-grid">
+			<?php while(have_rows('services-repeater', 'option')): the_row();  ?>
+			<div class="services-services-grid-item fade fade-up">
+				<h3 class="services-services-grid-item-header"><?php echo get_sub_field('service-name', 'option'); ?></h3>
+				<div class="services-services-grid-item-wrapper">
+					<div class="services-services-grid-item-imagecontainer">
+						<img src="<?php echo get_sub_field('service-image', 'option'); ?>" class="services-services-grid-item-imagecontainer-image">
+					</div>
+					<div class="services-services-grid-item-descriptioncontainer">
+						<div class="services-services-grid-item-descriptioncontainer-description"><?php echo get_sub_field('service-description', 'option'); ?></div>
+					</div>
+					<div class="services-services-grid-item-pricecontainer">
+						<div class="services-services-grid-item-pricecontainer-price"><?php echo get_sub_field('service-price', 'option'); ?></div>
+					</div>
+				</div>
+			</div>
+			<?php endwhile; ?>
+		</div>
+		<?php endif; ?>
+	</section>
+	<?php
+
+	get_template_part('partials/global', 'recent_posts');
+	get_template_part('partials/global', 'contact');
+
+	?>
+</main>
+
+<?php get_footer(); ?>

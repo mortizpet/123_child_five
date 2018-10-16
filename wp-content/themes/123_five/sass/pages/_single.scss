@@ -1,0 +1,40 @@
+@media only screen {
+	.single-hero-header{
+		width: 100%;
+		text-align: center;
+	}
+	.single-single-title {
+		padding: 5px 0;
+		margin: 5px auto;
+	}
+	.single-single-date{
+		font-size: 1.4rem;
+	}
+	.single-single{
+		padding: 40px 20px;
+	}
+}
+
+@media only screen and (min-width: $medium){
+	.single-single-date{
+		font-size: 1.8rem;
+	}
+}
+
+@media only screen and (min-width: $large){
+	.single-hero-header{
+		top: calc(50% + 30px);
+	}
+
+	.single-single-content {
+		display: inline-block;
+		max-width: calc(70% - 20px);
+
+	}
+	.single {
+		.blog-blog-sidebar {
+			display: inline-block;
+			margin-top: 20px;
+		}
+	}
+}

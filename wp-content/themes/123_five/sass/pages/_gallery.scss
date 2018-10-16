@@ -1,0 +1,39 @@
+@media only screen {
+	.gallery-galleries-gallery-header{
+		text-transform: lowercase;
+		font-weight: 700;
+		font-size: 4rem;
+		&:after{
+			display: block;
+			content: '';
+			border-bottom: 6px solid $pink;
+			width: 60px;
+			margin: 10px auto;
+		}
+	}
+	#baguetteBox-overlay .full-image figure figcaption{
+		background-color: $ink;
+		text-transform: lowercase;
+		font-weight: 700;
+	}
+
+	
+	// Disabled Page
+	.disabled {
+		position: relative;
+		overflow: hidden;
+	}
+	.disabled-center-image {
+		width: 435px;
+		max-width: 90%;
+	}
+
+
+}
+
+@media only screen and (min-width: $medium){
+
+}
+
+@media only screen and (min-width: $large){
+}
